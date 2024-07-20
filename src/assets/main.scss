@@ -1,0 +1,57 @@
+@import "./utils/typography.scss";
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  // header section
+  header {
+    // @import 'component/header.scss';
+  }
+
+  // main section
+  main[role="main"] {
+    // anticipate page that has very few content ( short height )
+    // to avoid hanging footer
+    min-height: calc(100vh - 527px);
+
+    // each page style goes here
+    // example : @import "page/homepage"
+    // @import 'page/index.scss';
+  }
+
+  // footer section
+  footer {
+    // @import 'component/footer.scss';
+  }
+
+  // // default style
+  // @import 'default/default.scss';
+
+  // // responsive style
+  // @import 'responsive/responsive.scss';
+}
+
+.banner-hero {
+  width: 100%;
+  height: 100vh;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.container {
+  @apply w-full max-w-[960px];
+}
