@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./*.html"],
+  content: ["./*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     screens: {
       sm: { max: "427px", min: "320px" },

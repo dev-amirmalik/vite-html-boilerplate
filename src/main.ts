@@ -1,5 +1,5 @@
-import "./assets/tailwind.scss";
-import "./assets/main.scss";
+import "./assets/styles/tailwind.scss";
+import "./assets/styles/main.scss";
 
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
@@ -30,3 +30,10 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 });
+
+// You can remove this if you don't need vue or any javascript framework
+import { createApp } from "vue";
+import SearchApp from "./apps/SearchApp/SearchApp.vue";
+if (document.querySelector("#searchApp")) {
+  createApp(SearchApp).mount("#searchApp");
+}

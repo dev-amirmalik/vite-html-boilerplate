@@ -1,9 +1,11 @@
 import { defineConfig } from "vite";
 import { createHtmlPlugin } from "vite-plugin-html";
 import commonjs from "@rollup/plugin-commonjs";
+import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   plugins: [
+    vue(),
     commonjs(),
     createHtmlPlugin({
       minify: false,
@@ -37,7 +39,7 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       output: {
-        format: "cjs",
+        // format: "cjs",
         assetFileNames: (assetInfo) => {
           let extType = `${assetInfo.name}`.split(".").pop();
           if (/png|jpe?g|svg|gif|tiff|bmp|ico|mp4/i.test(`${extType}`)) {
