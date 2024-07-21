@@ -31,9 +31,9 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// You can remove this if you don't need vue or any javascript framework
-import { createApp } from "vue";
-import SearchApp from "./apps/SearchApp/SearchApp.vue";
-if (document.querySelector("#searchApp")) {
-  createApp(SearchApp).mount("#searchApp");
+async function appInit() {
+  const searchApp = await import("./apps/SearchApp/SearchApp");
+  searchApp.init();
 }
+
+appInit();
